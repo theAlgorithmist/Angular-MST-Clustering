@@ -1,0 +1,45 @@
+<!-- Primary container has a primitive card appearance with the SVG rendering on a DIV inside it -->
+<div class="card-container bounded">
+  <div svgContainer class="graph" top="10" right="12"></div>
+
+  <div class="card-footer">
+    <!-- in practice, you would create some nice display components for each piece of information or create some
+    more divs with complex styling; this is old-school, but adequate for purposes of demonstrating the computational
+    results -->
+    <div align="center">
+      <table class="summary-table">
+        <tbody>
+          <tr>
+            <td width="260">
+              <div><span class="smallTxt bolded">Layout:</span>&nbsp;<span class="smallTxt">{{layoutTitle}}</span></div>
+              <div><span class="smallTxt bolded">Node Count:</span>&nbsp;<span class="smallTxt">{{nodeCount}}</span></div>
+            </td>
+            <td width="260">
+              <div class="smallTxt" *ngFor="let list of clusterList; let i = index">Cluster: {{i+1}}: {{list}}</div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- some simple controls ... -->
+    <div align="center" class="controls">
+      <span class="rm10">Select number of clusters: </span>
+      <span class="rm10">
+        <input type="radio" id="one" name="selectCluster" value="1" (change)="onClusterSelected(1)" checked>
+        <label for="one">One</label>
+      </span>
+
+      <span class="rm10">
+        <input type="radio" id="two" name="selectCluster" value="2" (change)="onClusterSelected(2)">
+        <label for="two">Two</label>
+      </span>
+
+      <span>
+        <input type="radio" id="three" name="selectCluster" value="3" (change)="onClusterSelected(3)">
+        <label for="three">Three</label>
+      </span>
+    </div>
+  </div>
+</div>
+
