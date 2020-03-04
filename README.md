@@ -13,7 +13,7 @@ When the MST is first computed, a tree is constructed from the edge list with th
 The layout (organization of nodes in a supporting structure such as wall or ceiling), MST, and cluster identification is rendered using SVG (SVG.js in particular).  An Angular structural directive is used to augment a container (DIV) with the necessary SVG canvas and provide drawing methods.
 
  
-Author:  Jim Armstrong - [The Algorithmist](http://www.algorithmist.net)
+Author:  Jim Armstrong - [The Algorithmist](https://www.linkedin.com/in/jimarmstrong)
 
 @algorithmist
 
